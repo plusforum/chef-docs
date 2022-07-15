@@ -1,0 +1,176 @@
+    1  top
+    2  clear
+    3  ip address
+    4  ll
+    5  curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chefdk -c stable
+    6  VER="22.7.1006"
+    7  wget https://packages.chef.io/files/stable/chef-workstation/${VER}/ubuntu/20.04/chef-workstation_${VER}-1_amd64.deb
+    8  sudo apt install ./chef-workstation_22.7.1006-1_amd64.deb 
+    9  knife
+   10  chef-client
+   11  sudo su
+   12  clear
+   13  chef-apply
+   14  kitchen
+   15  clear
+   16  exit
+   17  clear
+   18  ll
+   19  chef
+   20  clear
+   21  chef --version
+   22  chef
+   23  clear
+   24  knife --version
+   25  knife
+   26  clear
+   27  kitchen 
+   28  clear
+   29  pwd
+   30  ls -la
+   31  chef
+   32  clear
+   33  pwd
+   34  chef generate repo chef-repo
+   35  ls -la
+   36  ls -l chef-repo/
+   37  ls -l .chef/
+   38  clear
+   39  ll
+   40  cd chef-repo/
+   41  ll
+   42  mkdir .chef
+   43  ll
+   44  cd .chef/
+   45  ll
+   46  vi admin.pem
+   47  vi plusforum.pem
+   48  cd ..
+   49  vi config.rb
+   50  clear
+   51  pwd
+   52  ll
+   53  knife
+   54  knife org list
+   55  cd .chef/
+   56  ll
+   57  knife ssh fetch
+   58  cd /etc/chef/
+   59  ll
+   60  cd ~
+   61  clear
+   62  cd chef-repo/
+   63  ll
+   64  cd .chef/
+   65  ll
+   66  cat admin.pem 
+   67  ll
+   68  vi admin.pem 
+   69  cd ..
+   70  clear
+   71  knife org list
+   72  cd ~
+   73  ll
+   74  git clone https://github.com/plusforum/chef-docs.git
+   75  cd chef-docs/
+   76  ll
+   77  cp admin.pem.txt ../chef-repo/.chef/admin.pem
+   78  cp config.rb.txt ../chef-repo/.chef/config.rb
+   79  cd ../
+   80  cd chef-repo/
+   81  clear
+   82  knife list org
+   83  knife
+   84  knife org list
+   85  cd .chef/
+   86  ll
+   87  sudo chmod 444 admin.pem 
+   88  ll
+   89  cd ..
+   90  knife org list
+   91  ll
+   92  cd .chef/
+   93  ll
+   94  knife org list
+   95  vi config.rb 
+   96  knife org list
+   97  knife ssl fetch
+   98  knife org list
+   99  knife ssl chech
+  100  knife ssl check
+  101  knife ssl fetch
+  102  cd trusted_certs/
+  103  ll
+  104  cd ~
+  105  cd chef-repo/
+  106  clear
+  107  cd .chef/
+  108  knife org list
+  109  vi config.rb 
+  110  knife org list
+  111  knife ssl fetch
+  112  vi config.rb 
+  113  knife ssl fetch
+  114  knife org list
+  115  clear
+  116  cd ..
+  117  ll
+  118  cd cookbooks/
+  119  ll
+  120  cd example/
+  121  ll
+  122  ll recipes/
+  123  ll
+  124  cat recipes/default.rb 
+  125  cd ../..
+  126  clear
+  127  cd .chef/
+  128  ll
+  129  cd ../cookbooks/
+  130  ll
+  131  chef generate cookbook webserver
+  132  ll]
+  133  ll
+  134  clear
+  135  ll webserver/
+  136  cd webserver/recipes/
+  137  chef generate recipe ubuntu
+  138  chef generate recipe ./ubuntu
+  139  cd ../../..
+  140  ll
+  141  clear
+  142  cd cookbooks/
+  143  ll
+  144  cd webserver/
+  145  ll
+  146  cd recipes/
+  147  ll
+  148  vi default.rb 
+  149  ll
+  150  vi service.rb
+  151  cd ..
+  152  ..
+  153  ll
+  154  ll recipes/
+  155  vi recipes/default.rb 
+  156  ll
+  157  cat kitchen.yml 
+  158  clear
+  159  cd ../..
+  160  ll
+  161  ll policyfiles/
+  162  cd ..
+  163  mkdir recipes
+  164  cd recipes/
+  165  vi default.rb
+  166  chef-apply default.rb 
+  167  clear
+  168  apt-get update
+  169  sudo su
+  170  ll
+  171  pwd
+  172  ll nodes/
+  173  sudo su
+  174  exit
+  175  clear
+  176  history > history.vm1.txt
